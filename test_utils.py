@@ -7,7 +7,7 @@ import utils
 
 class TestUtils(unittest.TestCase):
     def test_fact(self):
-        list=[1,1,2,4,6,24,120,720,5040,40320,362880,3628800]
+        list=[1,1,2,6,24,120,720,5040,40320,362880,3628800]
         for i in range(10):
             self.assertEqual(utils.fact(i),list[i])
         with self.assertRaises(ValueError):
