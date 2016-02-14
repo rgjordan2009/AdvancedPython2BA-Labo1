@@ -18,16 +18,17 @@ class TestUtils(unittest.TestCase):
     def test_roots(self):
         with self.assertRaises(TypeError):
             utils.roots('a',2,4)
-        self.assertEqual(utils.roots(0,4,4),tuple(-2))
+        self.assertEqual(utils.roots(0,4,4),tuple(-1))
         self.assertEqual(utils.roots(0,4,0),tuple(0))
         self.assertEqual(utils.roots(0,0,4),tuple())
 
 
     
     def test_integrate(self):
-        assertEqual(utils.integrate('x^2',1,4),21)
+        self.assertEqual(utils.integrate('3',0,3),9)
         with self.assertRaises(TypeError):
             utils.integrate('x^2','a',4)
+
 
 
 if __name__ == '__main__':
