@@ -34,9 +34,13 @@ def roots(a, b, c):
           to the roots of the ax^2 + bx + c polynomial.
     """
     if a ==0:
-        sol1=(-c)/(b)
-        tuple=(sol1)
-        return tuple
+            if b==0:
+                tuple=()
+                return tuple
+            sol1=(-c)/(b)
+            tuple=(sol1,)
+
+            return tuple
 
     delta=(b**2)-(4*a*c)
     if delta >0:

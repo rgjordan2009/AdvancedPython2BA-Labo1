@@ -18,9 +18,9 @@ class TestUtils(unittest.TestCase):
     def test_roots(self):
         with self.assertRaises(TypeError):
             utils.roots('a',2,4)
-        self.assertEqual(utils.roots(0,4,4),tuple(-1))
-        self.assertEqual(utils.roots(0,4,0),tuple(0))
-        self.assertEqual(utils.roots(0,0,4),tuple())
+        self.assertEqual(utils.roots(0,4,4),(-1,))
+        self.assertEqual(utils.roots(0,4,0),(0,))
+        self.assertEqual(utils.roots(0,0,4),())
 
 
     
